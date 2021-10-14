@@ -1,0 +1,5 @@
+com\qodbrains\qodbrainspetclinic\model\Person.class
+com\qodbrains\qodbrainspetclinic\model\Vet.class
+com\qodbrains\qodbrainspetclinic\model\Pet.class
+com\qodbrains\qodbrainspetclinic\model\Owner.class
+com\qodbrains\qodbrainspetclinic\model\PetType.class
