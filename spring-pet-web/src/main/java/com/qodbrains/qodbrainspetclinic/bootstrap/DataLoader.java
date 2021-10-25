@@ -4,8 +4,6 @@ import com.qodbrains.qodbrainspetclinic.model.Owner;
 import com.qodbrains.qodbrainspetclinic.model.Vet;
 import com.qodbrains.qodbrainspetclinic.services.OwnerService;
 import com.qodbrains.qodbrainspetclinic.services.VetService;
-import com.qodbrains.qodbrainspetclinic.services.map.OwnerServiceMap;
-import com.qodbrains.qodbrainspetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -51,6 +49,6 @@ public class DataLoader implements CommandLineRunner {
 
         vetService.save(musk);
 
-        System.out.println(vetService.findById(1L).toString());
+        System.out.println(vetService.findById(2L).toString());
     }
 }

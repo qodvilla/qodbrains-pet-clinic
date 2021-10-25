@@ -2,9 +2,11 @@ package com.qodbrains.qodbrainspetclinic.services.map;
 
 import com.qodbrains.qodbrainspetclinic.model.Pet;
 import com.qodbrains.qodbrainspetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
