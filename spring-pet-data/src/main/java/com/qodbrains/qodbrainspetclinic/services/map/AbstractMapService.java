@@ -17,7 +17,7 @@ public abstract class AbstractMapService<T, ID> {
     }
 
     T save(ID id, T o){
-        return o;
+        return this.map.put(id, o);
     }
 
     void deleteById(ID id){
